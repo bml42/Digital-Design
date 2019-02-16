@@ -1,2 +1,3 @@
 # Digital-Design
-VHDL code for use with Terasic DE1-SOC FPGA board
+VHDL code for use with Terasic DE1-SOC FPGA board.
+<br></br>Each of these reports discusses the individual goals of each project.  I did not include the original source code and assembly files for each project as each project uses around 100 files to compile an output file for the FPGA board.  The dev board works in a similar way to the HC11 used in Microcontroller applications to do things such as signal processing, mathematical logic, voltage control, IO, etc.  <br></br>The "WhackaMole", "ledCombo", and "buttonLogic" files are part of my final project for Digital Design.  They are used to control onboard push buttons and LEDs to simulate a primitive Whack-a-Mole game for the user.  
