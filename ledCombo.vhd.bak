@@ -1,0 +1,56 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_logic_unsigned.ALL;
+
+ENTITY ledCombo IS 
+
+GENERIC
+	(
+	DEVICENUM 	: 	INTEGER := 6
+	--HEXNUM		: 	INTEGER := 4
+	
+	);
+
+PORT
+(
+	clk,reset	:	IN STD_LOGIC;
+	
+	ledCombination : OUT STD_LOGIC_VECTOR(DEVICENUM DOWNTO 0)
+
+);
+
+
+END ledCombo;
+
+
+ARCHITECTURE behavior OF ledCombo IS
+
+SIGNAL clkCnt		: STD_LOGIC; --timeslice
+
+BEGIN
+
+ledCombination <= "100000";
+clkCnt <= 0;
+
+PROCESS(reset, clk)
+
+if(rising_edge(clk))	THEN
+	
+	clkCnt <= clkCnt + 1;
+
+	if(reset = '0') THEN
+
+		ledCombination = "100000";
+		clkCnt <= 0;
+	ELSE
+		if 
+
+	END IF;
+	
+
+END IF;
+
+
+
+
+end behavior;

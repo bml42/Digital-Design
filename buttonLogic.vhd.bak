@@ -1,0 +1,47 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_logic_unsigned.ALL;
+
+ENTITY buttonLogic IS
+
+GENERIC
+(
+	DEVICENUM 	: 	INTEGER := 6;
+	HEXNUM		: 	INTEGER := 4
+);
+
+PORT
+(
+	clk,reset			:	IN STD_LOGIC;
+	push_button 		: 	IN STD_LOGIC_VECTOR(DEVICENUM - 1 DOWNTO 0);
+	
+
+
+);
+
+END buttonLogic;
+
+ARCHITECTURE behavior of buttonLogic IS
+
+SIGNAL clkCnt		: STD_LOGIC_VECTOR(2 DOWNTO 0)  --clkcnt = timeslice    3 bits - counts to 4 at most 
+
+
+BEGIN
+PROCESS(clk,push_button)
+BEGIN
+
+IF(rising_edge(clk)) THEN
+
+	
+
+END IF;
+
+END behavior;
+
+--BUTTONPUSH: FOR i IN 0 TO DEVICENUM-1 
+	--IF(LED[i] AND push_button[i])
+		--score <= score + t;						--t = 2 ->score+=2
+	--ELSIF(push_button[i] = 1 AND LED[i] = 0)
+	--	buzzer <= 1; 								--set for lenth of time and then =0
+	--END IF;
+--END LOOP BUTTONPUSH;
